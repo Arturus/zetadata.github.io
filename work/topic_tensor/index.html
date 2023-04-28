@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>TopicTensor: Instagram topics - ZetaData FZCO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" href="/favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="/css/style.min.80f05de081f6e7de0c68e13764c2cc7cfb860fab823aeb933f1646fe70d03c82.css">
+  
+
+  
+
+</head>
+
+<body class='page page-work-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    <li class="menu-item-services">
+      <a href="/services/">
+        
+        <span>Services</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-work">
+      <a href="/work/">
+        
+        <span>Work</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-about">
+      <a href="/about/">
+        
+        <span>About</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-history">
+      <a href="/history/">
+        
+        <span>History</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-contact">
+      <a href="/contact/">
+        
+        <span>Contact</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div id="wrapper" class="wrapper">
+    
+  <script type="text/javascript">
+  MathJax = {
+    tex: {
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+    },
+  };
+</script>
+<script
+    async
+    id="MathJax-script"
+    src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"
+    integrity="sha384-+BSz3oj3ILMYvOBr16U9i0H4RZRmGyQQ+1q9eqr8T3skmAFrJk8GmgwgqlCZdNSo"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    type="text/javascript"></script>
+
+
+
+<div class='header header-absolute'>
+  <div class="container">
+    <div class="logo">
+      <a href="/"><img height=29px width=36px alt="ZetaData" src="/images/ZetaData.svg" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="/"><img height=36px width=36px alt="ZetaData" src="/images/logo-mobile.svg" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    <li class="menu-item-services">
+      <a href="/services/">
+        
+        <span>Services</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-work">
+      <a href="/work/">
+        
+        <span>Work</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-about">
+      <a href="/about/">
+        
+        <span>About</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-history">
+      <a href="/history/">
+        
+        <span>History</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-contact">
+      <a href="/contact/">
+        
+        <span>Contact</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button" aria-label="Toggle Menu">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+    
+<div id="hero" class="hero-image hero-image-setheight" style="background-image: url('/work/topic_tensor/incredible.png')">
+  <div class="container ">
+    <div class="hero-text">
+      <span class="hero-section">work</span>
+      <h1>TopicTensor: Instagram topics</h1>
+      <p>The project was implemented for AdMonitor Technologies Inc</p>
+    </div>
+  </div>
+</div>
+  
+<div class="container pt-4 pt-md-10 pb-4 pb-md-10">
+  <div class="row justify-content-start">
+    <div class="col-12 col-md-8">
+      <div class="work work-single">
+        <div class="content"><h2 id="the-challenge-of-selecting-influencers">The Challenge of Selecting Influencers</h2>
+<p>Advertisers who promote products and services through influencer posts face a significant problem called targeting. In advertising platforms like AdWords, advertisers can focus on specific keywords to narrow down their target audience, ensuring that it matches the products and services they&rsquo;re promoting. However, this capability doesn&rsquo;t exist on social networks like Instagram, where millions of potential influencers can promote ads. How can an advertiser choose influencers whose content aligns with their campaign?</p>
+<p>One option is for the advertiser to actively use Instagram and be familiar with popular influencers they are already following. Alternatively, they could advertise blindly, hoping to reach at least a small percentage of their target audience. Clearly, both options are suboptimal, making Instagram an inefficient choice for niche, medium, and small advertisers.</p>
+<p>Solving this problem would make Instagram advertising accessible and convenient for everyone, not just major brands.</p>
+<h2 id="thematic-classifier-no-thank-you">Thematic Classifier? No, Thank You.</h2>
+<p>The most obvious way to categorize influencers into thematic segments is through a thematic classifier. First, a tree of topics is manually created. Then, each influencer is manually or automatically (using machine learning) assigned to categories within this tree.</p>
+<p>Most advertising systems, including large ones like Facebook Ads, follow this approach. However, this method is inefficient. The number of topics potentially interesting to advertisers is vast, and one could even argue that it is infinite. The more specialized an advertiser&rsquo;s niche, the more granular the classification they require.</p>
+<ul>
+<li>For example, there is a topic called <strong>Food</strong>.</li>
+<li>Clearly, a restaurant needs not just <strong>Food</strong>, but <strong>Food : Restaurants</strong>.</li>
+<li>If it&rsquo;s a Thai restaurant, an even narrower topic is needed: <strong>Food : Restaurants : Thai Cuisine</strong>.</li>
+<li>If the restaurant is located in London, it would be beneficial to include a topic like <strong>Food : Restaurants : London</strong>, and so on.</li>
+</ul>
+<p>However, a thematic tree cannot grow indefinitely:</p>
+<ol>
+<li>It would simply become unwieldy for advertisers to work with. The size of a classifier that an average person can easily comprehend and retain in their memory is no more than 100 items.</li>
+<li>The more categories there are, the more difficult it becomes to assign influencers to specific categories, and the more work is needed for this task. Manually doing this work for several million influencers is virtually impossible. Machine learning can be used, but an initial training dataset with examples of correct influencer classification must be created. Humans create these datasets, and humans make mistakes, have subjective views, and evaluations (different assessors may classify the same influencer into different categories). Considering that many influencers work in multiple topics simultaneously, the problem becomes even more complex.</li>
+<li>A lot of effort will be required to maintain the classifier in an up-to-date state (new trends constantly emerge, new topics open, and old ones fade), as well as to update the training dataset.</li>
+</ol>
+<p>As a result, a small thematic tree would be too inflexible and provide too coarse a division, while a large tree would be cumbersome for both advertisers and its creators. A different solution is needed.</p>
+<img src="topic_tree.jpg" width="560"/>
+<h2 id="advertisers-define-the-topic">Advertisers Define the Topic</h2>
+<p>What if the topic could be defined by a set of keywords, similar to AdWords? This way, advertisers can customize any topic, no matter how narrow, without having to navigate a massive classifier. However, in AdWords, keywords correspond to what potential customers explicitly search for, but what should keywords correspond to on Instagram? Hashtags? It&rsquo;s not that simple.</p>
+<ol>
+<li>An influencer writing about cars isn&rsquo;t necessarily going to use the hashtag <code>#car</code>; they might use <code>#auto</code>, <code>#fastcars</code>, <code>#wheels</code>, <code>#drive</code>, or brand names like <code>#bmw</code>, <code>#audi</code>, etc. How should an advertiser guess which specific tags influencers use? In principle, this issue also exists in AdWords: advertisers need to put in considerable effort to cover all possible keywords in their niche.</li>
+<li>An influencer might use a hashtag, like <code>#car</code>, accidentally if they bought a new car or simply saw and photographed an interesting vehicle on the street. This doesn&rsquo;t mean they write about automotive topics.</li>
+<li>Influencers often use popular hashtags unrelated to their post&rsquo;s theme just to appear in search results for that tag (hashtag spam). For example, the tag <code>#cat</code> could be attached to a photo of a bearded hipster, a sunset landscape, or a selfie in a new outfit surrounded by friends.</li>
+</ol>
+<p>Therefore, selecting influencers based solely on the presence of advertiser-defined hashtags will yield poor results. More sophisticated methods are needed to address this challenge.</p>
+<h2 id="topic-modeling-the-theory">Topic Modeling: The Theory</h2>
+<p>In modern natural language processing techniques, there is a field called <em>topic modeling</em>. The simplest way to explain the application of topic modeling to our problem is with a straightforward example.</p>
+<p>Imagine a very primitive social network where people have only two main interests - an interest in food (<em>Food</em>) and an interest in Japan (<em>Japan</em>). If the &ldquo;strength&rdquo; of interest is represented by a number between 0 and 1, then any hashtags used by influencers can be placed on a 2D diagram.</p>
+
+
+
+<figure>
+
+<img src="tags2d.png" alt="Example of assigning topics in a two-dimensional space" width="600" />
+
+
+
+<figcaption data-pre="Figure " data-post=":" >
+  
+  <p>
+    Example of assigning topics in a two-dimensional space
+    
+    
+    
+  </p> 
+</figcaption>
+
+</figure>
+<p>As seen, any hashtag can be described by a pair of numbers corresponding to the X and Y coordinates in the topic space. Tags related to a single theme group together in clusters, meaning they have similar coordinates. Using this diagram, the relevance of a post to specific topics can be calculated by determining the &ldquo;average&rdquo; coordinates in the topic space for all tags included in the post (i.e., obtaining the <a href="https://en.wikipedia.org/wiki/Centroid">centroid</a>). The centroid&rsquo;s X and Y coordinates will correspond to the post&rsquo;s relevance to the <em>Food</em> and <em>Japan</em> topics; the closer the coordinate is to 1, the higher the relevance. By calculating the centroid for all of an influencer&rsquo;s posts in the same way, the overall relevance of their content to specific topics can be understood.</p>
+<p>In real-world topic modeling, of course, not just two topics are used, but rather dozens or even hundreds. Consequently, tags exist in a high-dimensional space. A more mathematical definition is as follows:</p>
+<ul>
+<li>There is a set of documents $D$ (in our case, these are posts), a set of words $W$ (in our case, these are tags), and a set of topics $T$, the size of which is predetermined.</li>
+<li>The content of the documents can be represented as a set of document-word pairs: $(d, w), d \in D, w \in W_d$</li>
+<li>Each topic $t \in T$ is described by an unknown distribution $p(w|t)$ over the set of words $w \in W$</li>
+<li>Each document $d\in D$ is described by an unknown distribution $p(t|d)$ over the set of topics $t\in T$</li>
+<li>It is assumed that the distribution of words in documents depends only on the topic: $p(w|t,d)=p(w|t)$</li>
+<li>During the construction of the topic model, the algorithm finds the &ldquo;word-topic&rdquo; matrix $\mathbf{\Phi} =||p(w|t)||$ and the &ldquo;topic-document&rdquo; matrix $\mathbf{\Theta} =||p(t|d)||$ based on the content of the collection $D$. We are interested in the first matrix.</li>
+</ul>
+<p>Topic modeling is equivalent to <a href="https://en.wikipedia.org/wiki/Non-negative_matrix_factorization">non-negative matrix factorization</a> (NMF). The input is a sparse &ldquo;word-document&rdquo; matrix $\mathbf{S} \in \mathbb{R}^{W \times D}$, which describes the probability of encountering word $w$ in document $d$. The low-rank matrices $\mathbf{\Phi} \in \mathbb{R}^{W \times T}$ and $\mathbf{\Theta} \in \mathbb{R}^{T \times D}$ are computed to approximate it.
+$$\mathbf{S} \approx \mathbf{\Phi}\mathbf{\Theta}$$
+More detailed information on topic modeling and its algorithms can be found on <a href="https://en.wikipedia.org/wiki/Topic_model">Wikipedia</a>.</p>
+<h2 id="topic-modeling-practice">Topic Modeling, Practice</h2>
+<p>In practice, topic modeling has shown mediocre results. The table below presents the modeling results for 15 topics using the <a href="https://github.com/bigartm/bigartm">BigARTM</a> library:</p>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Top tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>sky, clouds, sea, spring, baby, ocean, nyc, flower, landscape, drinks</td>
+</tr>
+<tr>
+<td>1</td>
+<td>beer, vintage, chill, school, rainbow, yoga, rock, evening, chicago, relaxing</td>
+</tr>
+<tr>
+<td>2</td>
+<td>sweet, chocolate, dance, rain, nike, natural, anime, old, wcw, reflection</td>
+</tr>
+<tr>
+<td>3</td>
+<td>foodporn, breakfast, delicious, foodie, handmade, gold, instafood, garden, healthy, vegan</td>
+</tr>
+<tr>
+<td>4</td>
+<td>architecture, california, lights, portrait, newyork, wine, blonde, familytime, losangeles, thanksgiving</td>
+</tr>
+<tr>
+<td>5</td>
+<td>nature, travel, autumn, london, fall, trees, tree, photoshoot, city, cake</td>
+</tr>
+<tr>
+<td>6</td>
+<td>flowers, design, inspiration, artist, goals, illustration, pizza, ink, glasses, money</td>
+</tr>
+<tr>
+<td>7</td>
+<td>winter, snow, catsofinstagram, sexy, cats, cold, quote, fire, disney, festival</td>
+</tr>
+<tr>
+<td>8</td>
+<td>work, mountains, paris, football, nails, video, florida, diy, free, japan</td>
+</tr>
+<tr>
+<td>9</td>
+<td>dog, puppy, wedding, dogsofinstagram, dogs, roadtrip, painting, trip, thankful, pet</td>
+</tr>
+<tr>
+<td>10</td>
+<td>coffee, quotes, river, yum, moon, streetart, sleepy, music, adidas, positivevibes</td>
+</tr>
+<tr>
+<td>11</td>
+<td>style, fashion, party, home, model, music, dress, goodvibes, couple, tired</td>
+</tr>
+<tr>
+<td>12</td>
+<td>fitness, motivation, gym, workout, drawing, dinner, fit, sketch, health, fresh</td>
+</tr>
+<tr>
+<td>13</td>
+<td>beach, lake, usa, shopping, hiking, fashion, kids, park, freedom, sand</td>
+</tr>
+<tr>
+<td>14</td>
+<td>makeup, cat, yummy, eyes, snapchat, homemade, tattoo, kitty, lips, mom</td>
+</tr>
+</tbody>
+</table>
+<p>It can be seen that some reasonable structure is discernible, but the topics are far from perfect. Increasing the number of topics to 150 results in a relatively small improvement.</p>
+<p>Perhaps the reason is that topic modeling is designed to work with documents containing hundreds or even thousands of words. In our case, the majority of posts have only 2-3 tags.</p>
+<p>BigARTM has a large number of hyperparameters and possible ways to apply them (at the beginning of training, at the end, to all topics, to individual topics, etc.). It is possible that better results could be obtained with certain settings, but TopicTensor is a commercial project that implies time limits for implementation. With topic modeling, there was a risk of spending all the project time on hyperparameter tuning and still not achieving satisfactory results. Other libraries (<a href="https://radimrehurek.com/gensim">Gensim</a>, <a href="http://mallet.cs.umass.edu/topics.php">Mallet</a>) also showed rather modest results.</p>
+<p>Therefore, a different, simpler, and at the same time more powerful modeling method was chosen.
+$ \newcommand{\sim}[2]{\operatorname{sim}(#1,#2)} $</p>
+<h2 id="topictensor-model">TopicTensor Model</h2>
+<p>The main advantage of topic modeling is the interpretability of the obtained results. For any word/tag, a set of weights is generated, showing how close the word is to each topic in the entire set.</p>
+<p>However, this advantage also imposes serious limitations on the model, forcing it to strictly adhere to a fixed number of topics, no more and no less. In reality, the number of topics in a large social network is virtually infinite. Therefore, by removing the requirement for interpretability of topics (and their fixed quantity), the training process becomes more efficient.</p>
+<p>As a result, a model is obtained that is conceptually similar to the well-known <a href="https://en.wikipedia.org/wiki/Word2vec">Word2Vec</a> model. Each tag is represented as a vector in an $N$-dimensional space: $w \in \mathbb{R}^N$. The degree of similarity (i.e., how close the topics are) between tags $w$ and $w'$ can be calculated as the dot product:
+$$\sim{w}{w'}=w \cdot w'$$
+as the Euclidean distance:
+$$\sim{w}{w'}=\|w-w'\|$$
+or as cosine similarity:
+$$\sim{w}{w'}=\cos(\theta )=\frac{w \cdot w'}{\|w \|\|w' \|}$$</p>
+<p>The model&rsquo;s task during training is to find tag representations that will be useful for one of the following predictions:</p>
+<ul>
+<li>Based on one tag, predict which other tags will be included in the post (Skip-gram architecture)</li>
+<li>Based on all the post&rsquo;s tags except one, predict the missing tag (CBOW architecture, &ldquo;bag of words&rdquo;)</li>
+<li>Take two random tags from the post, and predict the second tag based on the first</li>
+</ul>
+<p>All these predictions boil down to the fact that there is a target tag $w_t$ that needs to be predicted, and a context $c$, represented by one or more tags included in the post. The model must maximize the probability of the tag depending on the context, which can be represented as a softmax criterion:</p>
+<p>$$P(w_t|c) = \operatorname{softmax}(\sim{w_t}{c})$$
+$$P(w_t|c) = \frac{\exp(\sim{w_t}{c})}{\sum_{w' \in W}\exp(\sim{w'}{c})}$$</p>
+<p>However, calculating softmax over the entire set of tags $W$ is expensive (the training can involve a million tags or more), so alternative methods are used instead. They involve a positive example $(w_t,c)$ that needs to be predicted, and randomly selected negative examples $(w_1^{-}, c), (w_2^{-}, c),\dots,(w_n^{-}, c)$, which serve as a sample of how <em>not</em> to predict. Negative examples should be sampled from the same tag frequency distribution as in the training data.</p>
+<p>The loss function for a set of examples can take the form of binary classification (Negative sampling in classic Word2Vec):
+$$L = \log(\sigma(\sim{w_t}{c})) +  \sum_i\log(\sigma(-\sim{w_i^-}{c}))$$
+$$\sigma(x) = \frac{1}{1+e^{-x}}$$
+or work as a ranking loss, pairwise comparing the &ldquo;compatibility&rdquo; with the context of positive and negative examples:
+$$L = \sum_{i} l(\sim{w_t}{c}, \sim{w_i^-}{c})$$
+where $l(\cdot, \cdot)$ is a ranking function, often using the max margin loss:
+$$l=\max(0,\mu+\sim{w_i^-}{c}−\sim{w_t}{c})$$</p>
+<p>The TopicTensor model is also equivalent to matrix factorization, but instead of a &ldquo;document-word&rdquo; matrix (as in topic modeling), a &ldquo;context-tag&rdquo; matrix is factorized here. Under certain types of predictions, this matrix turns into a &ldquo;tag-tag&rdquo; co-occurrence matrix.</p>
+<h2 id="practical-implementation-of-topictensor">Practical Implementation of TopicTensor</h2>
+<p>Several possible ways of implementing the model were considered: code in <a href="https://www.tensorflow.org/">Tensorflow</a>, code in <a href="https://pytorch.org/">PyTorch</a>, the <a href="https://radimrehurek.com/gensim/">Gensim</a> library, and the <a href="https://github.com/facebookresearch/StarSpace">StarSpace</a> library. The latter was chosen as it requires minimal effort for modification (all necessary functionality is already available), provides high quality, and scales almost linearly on any number of cores (32 and 64-core machines were used to speed up training).</p>
+<p>By default, StarSpace uses the <em>max margin ranking loss</em> function and <em>cosine distance</em> as the vector similarity metric. Subsequent experiments with hyperparameters showed that these default settings are optimal.</p>
+<h3 id="hyperparameter-tuning">Hyperparameter Tuning</h3>
+<p>Before the final training, hyperparameter tuning was conducted to find a balance between quality and acceptable training time. The quality was measured as follows: a sample of posts that the model had not seen during training was taken. For each tag in the post (a total of $n$ tags in the post), the most similar candidate tags were found according to the cosine similarity criterion from the set of all tags $W$:
+$$candidates_i=\operatorname{top_n}(\sim{w_t}{w'}, \forall w' \in W)$$
+$$i \in 1 \dots n$$
+The number of these candidates that matched the actual tags in the post was calculated (number of matches $n^{+}$).
+$$quality=\frac{\sum n^+}{\sum n}$$
+The quality is the percentage of correctly guessed tags for all posts in the sample. This quality assessment is the closest to the real-life use of the model, where a user will mostly provide one starting tag and select other tags, bloggers, etc., based on it.</p>
+<p>This assessment also implies that it is most optimal to train the model using the skip-gram criterion (predicting the remaining tags from a single tag). This was confirmed in practice: skip-gram training showed the best quality, although it turned out to be the slowest.</p>
+<p>The following hyperparameters were tuned:</p>
+<ul>
+<li>Vector dimensions</li>
+<li>Number of epochs for training</li>
+<li>Number of negative examples</li>
+<li>Learning rate</li>
+<li>Undersampling and oversampling</li>
+</ul>
+<p>The last hyperparameter is related to the fact that training on posts with fewer tags is faster than on posts with a larger number of tags. In a single pass, StarSpace randomly selects only one target tag from a post. Thus, over 20 epochs, each tag in a post containing 2 target tags will be the target, on average, 10 times, while each tag in a post containing 20 tags will be the target, on average, only once. The model will overfit on short tag lists and underfit on long ones. To avoid this, undersampling should be applied to &ldquo;short&rdquo; posts and oversampling to &ldquo;long&rdquo; posts.</p>
+<h3 id="data-preparation">Data Preparation</h3>
+<p>Tags were normalized: converted to lowercase, diacritical marks removed (except for cases where the mark affects the meaning of the word).</p>
+<p>For training, tags that appeared in the training set at least N times across different bloggers were selected to ensure a variety of contexts for their use (depending on the language, N varied from 20 to 500).</p>
+<p>For each language, a sample of the top 1,000 most common tags was created, and in this sample, a blacklist was created for commonly used words that do not carry thematic weight (e.g., me, you, together, etc.), numerals, color names (red, yellow, etc.), and some tags particularly favored by spammers.</p>
+<p>Each blogger&rsquo;s tags were reweighted according to their frequency of use by that blogger. Most bloggers have &ldquo;favorite&rdquo; tags and combinations used in almost every post, and if their weight is not reduced, an actively writing blogger can skew global statistics on the use of their favorite tags, causing the model to learn the preferences of that particular blogger.</p>
+<p>The final training set consisted of approximately 8 billion tags from 1 billion posts. Training took more than three weeks on a 32-core server.</p>
+<h2 id="results">Results</h2>
+<p>The obtained embeddings showed excellent separation of topics, good generalization ability, and resistance to spam tags.</p>
+<p>A demo sample of the top 10K tags (English language only) is <a href="http://projector.tensorflow.org/?config=https://gist.githubusercontent.com/Arturus/5dc4d72432e0fc2a5d6f543178a39f1f/raw/790392fe844d86eb46a5ac07622ac6715f8c67de/sample.json">available for viewing</a> in the Embedding Projector. Following the link, switch to t-SNE mode (tab in the lower-left corner) and wait for approximately 500 iterations to build the 3D projection. It is best to view in <code>Color By = logcnt</code> mode. If you don&rsquo;t want to wait, in the lower-right corner, there is a <code>Bookmarks</code> section; select <code>Default</code> to load a pre-calculated projection immediately.</p>
+<h3 id="examples-of-topic-formation">Examples of Topic Formation</h3>
+<p>Let&rsquo;s start with the simplest case. We will define a topic with one tag and find the top 50 relevant tags.
+
+
+
+<figure>
+
+<img src="bmw.png" alt="Topic defined by the tag `#bmw`" width="800" />
+
+
+
+<figcaption data-pre="Figure " data-post=":" >
+  
+  <p>
+    Topic defined by the tag <code>#bmw</code>
+    
+    
+    
+  </p> 
+</figcaption>
+
+</figure>
+<img src="relevance.png" width="400"/><br/>
+Tags are colored according to relevance. The size of the tag is proportional to its popularity.</p>
+<p>As seen, TopicTensor has excellently formed the &lsquo;BMW&rsquo; topic and found many relevant tags that most people are not even aware of.</p>
+<p>Let&rsquo;s make the task more complex and form a topic from several German car brands (finding tags that are closest to the sum of input tag vectors):
+
+
+
+<figure>
+
+<img src="cars.png" alt="Topic defined by tags `#bmw`, `#audi`, `#mercedes`, `#vw`" width="800" />
+
+
+
+<figcaption data-pre="Figure " data-post=":" >
+  
+  <p>
+    Topic defined by tags <code>#bmw</code>, <code>#audi</code>, <code>#mercedes</code>, <code>#vw</code>
+    
+    
+    
+  </p> 
+</figcaption>
+
+</figure></p>
+<p>In this example, we can see TopicTensor&rsquo;s ability to generalize: TopicTensor understood that we are referring to cars in general (tags <code>#car</code>, <code>#cars</code>). It also recognized the preference for German cars in the topic (tags outlined in red) and added the &ldquo;missing&rdquo; tags: <code>#porsche</code> (also a German car brand), and alternative tag spellings not present in the input: <code>#mercedesbenz</code>, <code>#benz</code>, and <code>#volkswagen</code>.</p>
+
+
+
+<figure>
+
+<img src="apple.png" alt="Topic defined by the tag `#apple`" width="800" />
+
+
+
+<figcaption data-pre="Figure " data-post=":" >
+  
+  <p>
+    Topic defined by the tag <code>#apple</code>
+    
+    
+    
+  </p> 
+</figcaption>
+
+</figure>
+<p>Let&rsquo;s make the task even more complex and create a topic based on the ambiguous tag <code>#apple</code>, which can represent both a brand and a simple fruit. It is evident that the brand topic dominates, but the fruit theme is also present in the form of tags <code>#fruit</code>, <code>#apples</code>, and <code>#pear</code>.</p>
+<p>Let&rsquo;s try to extract a purely &ldquo;fruit&rdquo; theme by adding several tags related to the Apple brand with negative weights. We will look for tags closest to the weighted sum of input tag vectors (by default, the weight is equal to one):
+$$target = \sum_i w_i \cdot tag_i $$</p>
+
+
+
+<figure>
+
+<img src="apple_fruit.png" alt="Topic defined by tags `#apple`, `#iphone:-1`, `#macbook:-0.05`, `#macintosh:-0.005`" width="800" />
+
+
+
+<figcaption data-pre="Figure " data-post=":" >
+  
+  <p>
+    Topic defined by tags <code>#apple</code>, <code>#iphone:-1</code>, <code>#macbook:-0.05</code>, <code>#macintosh:-0.005</code>
+    
+    
+    
+  </p> 
+</figcaption>
+
+</figure>
+<p>As seen, the negative weights removed the brand theme, leaving only the fruit theme.</p>
+<p>
+
+
+<figure>
+
+<img src="mirror.png" alt="Topic defined by the tag `#mirror`" width="800" />
+
+
+
+<figcaption data-pre="Figure " data-post=":" >
+  
+  <p>
+    Topic defined by the tag <code>#mirror</code>
+    
+    
+    
+  </p> 
+</figcaption>
+
+</figure>
+TopicTensor is aware that the same concept can be expressed by different words in different languages, as demonstrated with the <code>#mirror</code> example. Along with the English <strong>mirror</strong> and <strong>reflection</strong>, the model selected: <strong>зеркало</strong> and <strong>отражение</strong> in Russian, <strong>espejo</strong> and <strong>reflejo</strong> in Spanish, <strong>espelho</strong> and <strong>reflexo</strong> in Portuguese, <strong>specchio</strong> and <strong>riflesso</strong> in Italian, and <strong>spiegel</strong> and <strong>spiegelung</strong> in German.</p>
+<p>
+
+
+<figure>
+
+<img src="boobs.png" alt="Topic defined by the tag `#boobs`" width="800" />
+
+
+
+<figcaption data-pre="Figure " data-post=":" >
+  
+  <p>
+    Topic defined by the tag <code>#boobs</code>
+    
+    
+    
+  </p> 
+</figcaption>
+
+</figure>
+In the last example, it can be seen that casual topics work just as well as brand-related ones.</p>
+<h3 id="influencer-selection">Influencer Selection</h3>
+<p>For each influencer, their posts are analyzed, and the vectors of all the tags within them are summed up.
+$$\beta=\sum_i^{|posts|}\sum_j^{|tags_i|} w_{ij}$$
+where $|posts|$ is the number of posts, and $|tags_i|$ is the number of tags in the $i$-th post. The resulting vector $\beta$ represents the <em>blogger&rsquo;s theme</em>. Next, influencers with a thematic vector closest to the user-defined thematic vector are identified. The list is sorted by relevance and presented to the user.</p>
+<p>The influencer&rsquo;s popularity and the number of tags in their posts are also taken into account, as otherwise, influencers with just one post containing one user-defined tag would top the list. The final score used to sort influencers is calculated as follows:
+$$score_i = {\sim{input}{\beta_i} \over \log(likes)^\lambda \cdot \log(followers)^\phi \cdot \log(tags)^\tau}$$
+where $\lambda, \phi, \tau$ are empirically selected coefficients within the range $0\dots1$</p>
+<p>Calculating cosine distance for the entire array of influencers (involving several million accounts) is time-consuming. To speed up the selection process, the <a href="https://github.com/nmslib/nmslib">NMSLIB</a> (Non-Metric Space Library) was employed, reducing the search time by an order of magnitude. NMSLIB pre-builds indices based on vector coordinates in space, enabling much faster computation of top similar vectors by calculating cosine distance only for relevant candidates.</p>
+<h3 id="demo-website">Demo Website</h3>
+<p>A demonstration website with a limited number of tags and bloggers is available at <a href="http://tt-demo.suilin.ru/">http://tt-demo.suilin.ru/</a>.
+On the site, you can experiment with topic formation and selecting influencers based on the generated themes.</p>
+<h3 id="topic-lookalikes">Topic Lookalikes</h3>
+<p>The $\beta$ vectors calculated for influencer selection can also be used to compare influencers with each other. Essentially, lookalikes are the same as influencer selection, but instead of a tag vector, the input is the topic vector $\beta$ of a user-defined influencer. The output is a list of influencers whose themes are close to the topic of the specified influencer, sorted by relevance.</p>
+<h3 id="fixed-topics">Fixed topics</h3>
+<p>As mentioned earlier, TopicTensor does not have explicitly defined topics.
+However, sometimes it is necessary to associate posts and influencers with a fixed set of topics
+for simplifying search or ranking influencers within separate topics. This gives rise to the task of extracting fixed topics
+from the tag vector space.</p>
+<p>To address this issue, unsupervised learning was chosen to avoid subjectivity in defining possible topics
+and to save resources, as manually reviewing hundreds of thousands of tags (even just 10% of them) and assigning topics to them is a labor-intensive task.</p>
+<p>The most obvious method for topic extraction is clustering the vector representation of tags, with one cluster representing one topic.
+Clustering was performed in two stages since no algorithms capable of efficiently searching for clusters in 200D space currently exist.</p>
+<p>In the first stage, dimensionality reduction was conducted using the <a href="https://github.com/lmcinnes/umap">UMAP</a> technology.
+In some sense, UMAP is an enhanced version of t-SNE (although based on entirely different principles), as it operates faster
+and better preserves the original topology of the data. The dimensionality was reduced to 5D, with cosine distance used
+as the distance metric, and the other hyperparameters were chosen based on the results of clustering (the second stage).</p>
+
+
+
+<figure>
+
+<img src="clusters3d.png" alt="An example of tag clustering in 3D space. Different clusters are marked with different colors (colors are not unique and can be repeated for different clusters)." width="600" />
+
+
+
+<figcaption data-pre="Figure " data-post=":" >
+  
+  <p>
+    An example of tag clustering in 3D space. Different clusters are marked with different colors (colors are not unique and can be repeated for different clusters).
+    
+    
+    
+  </p> 
+</figcaption>
+
+</figure>
+<p>In the second stage, clustering was performed using the <a href="https://github.com/scikit-learn-contrib/hdbscan">HDBSCAN</a> algorithm.
+The clustering results (for English language only) can be viewed
+<a href="https://github.com/Arturus/clusters_new/blob/master/index.md">on GitHub</a>.
+Clustering identified about 500 topics (the number of topics can be adjusted within wide limits using UMAP and clustering parameters),
+with 70%-80% of tags included in the clusters. Visual inspection revealed good thematic coherence and no noticeable correlation
+between clusters. However, for practical application, the clusters require refinement: assembling them into a tree,
+removing useless clusters (e.g., <a href="https://raw.githubusercontent.com/Arturus/clusters_new/master/jack.txt">personal names cluster</a>, <a href="https://raw.githubusercontent.com/Arturus/clusters_new/master/help.txt">negative emotions cluster</a>, <a href="https://raw.githubusercontent.com/Arturus/clusters_new/master/people.txt">common words cluster</a>)
+, and combining some clusters into a single topic.</p>
+</div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+  </div>
+
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-inner">
+          
+          <ul class="footer-menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li class="copyright">© 2023 ZetaData FZCO</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+
+
+
+  <script type="text/javascript" src="/js/services.min.052ec1d7bcff8bba2b50359ebe62c0e6d0f530b3bd5cf723d5ccc5e8f22bd123.js"></script>
+  
+
+
+  
+  <script type="text/javascript" src="/js/scripts.min.98ee06cc35517b5800b382aecb0fc59893e95b9c11dd21842d0d57e4f68043e3.js"></script>
+  
+
+  
+  
+  
+    
+  
+
+
+</body>
+</html>
