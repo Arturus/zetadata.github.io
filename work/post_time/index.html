@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Posting time forecast for Instagram - ZetaData FZCO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" href="/favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="/css/style.min.80f05de081f6e7de0c68e13764c2cc7cfb860fab823aeb933f1646fe70d03c82.css">
+  
+
+  
+
+</head>
+
+<body class='page page-work-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    <li class="menu-item-services">
+      <a href="/services/">
+        
+        <span>Services</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-work">
+      <a href="/work/">
+        
+        <span>Work</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-contact">
+      <a href="/contact/">
+        
+        <span>Contact</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div id="wrapper" class="wrapper">
+    
+  <script type="text/javascript">
+  MathJax = {
+    tex: {
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+    },
+  };
+</script>
+<script
+    async
+    id="MathJax-script"
+    src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"
+    integrity="sha384-+BSz3oj3ILMYvOBr16U9i0H4RZRmGyQQ+1q9eqr8T3skmAFrJk8GmgwgqlCZdNSo"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    type="text/javascript"></script>
+
+
+
+<div class='header header-absolute'>
+  <div class="container">
+    <div class="logo">
+      <a href="/"><img height=29px width=36px alt="ZetaData" src="/images/ZetaData.svg" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="/"><img height=36px width=36px alt="ZetaData" src="/images/logo-mobile.svg" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    <li class="menu-item-services">
+      <a href="/services/">
+        
+        <span>Services</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-work">
+      <a href="/work/">
+        
+        <span>Work</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-contact">
+      <a href="/contact/">
+        
+        <span>Contact</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button" aria-label="Toggle Menu">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+    
+<div id="hero" class="hero-image hero-image-setheight" style="background-image: url('/')">
+  <div class="container ">
+    <div class="hero-text">
+      <span class="hero-section">work</span>
+      <h1>Posting time forecast for Instagram</h1>
+      <p>implemented for AdMonitor Technologies Inc</p>
+    </div>
+  </div>
+</div>
+  
+<div class="container pt-4 pt-md-10 pb-4 pb-md-10">
+  <div class="row justify-content-start">
+    <div class="col-12 col-md-8">
+      <div class="work work-single">
+        <div class="content"><p>The audience of an Instagram blogger can be divided into active (those who like posts) and passive (those who follow but do not like posts) users. For advertisers, the active audience is of particular interest, so it is better to determine their characteristics (socio-demographics, interests, etc.) separately. To identify the active audience, it is essential to collect the likes on posts. The problem is that large bloggers may have millions of likes, and Instagram returns a very limited number of latest likes per request, making it technically challenging to obtain all likes from all bloggers' posts.</p>
+<p>A reasonable alternative is to sample likes. If, for example, a sample of 10,000 likes is taken, the audience characteristics calculated based on this sample will not differ significantly from those determined from a million likes. However, for this to work, the sampling must be uniform, meaning that all &ldquo;likers&rdquo; should have approximately equal chances of being included in the sample. A uniform sample can be obtained by collecting the latest post likes at regular time intervals. Another issue arises here: a post accumulates most of its likes within the first few hours of being published. Therefore, if a new post is not detected in time, the majority of likes will no longer be accessible, and a sample can only be drawn from the &ldquo;tail&rdquo; of likers, leading to skewed statistics. Being just an hour late can cause us to miss 20-30% of all likes.</p>
+<p>The simplest way to address these delays is to check for new posts more frequently, for example, every 10 minutes. However, this approach is also the least economical in terms of the number of requests made to Instagram. It is unlikely that a blogger would post while asleep, and they might have preferred posting times, favorite days of the week, etc. By understanding each blogger&rsquo;s individual &ldquo;schedule&rdquo; and adjusting our checks accordingly, we can achieve a significant reduction in the number of requests.</p>
+<h2 id="how-bloggers-post">How Bloggers Post</h2>
+<p>To understand if we can identify behavioral patterns among bloggers, let&rsquo;s visualize some available data. The following figures illustrate the distribution of intervals between posts, the number of posts by time of day, and the audience&rsquo;s activity from different countries.</p>
+
+
+
+<figure>
+
+<img src="image42.png" alt="Distribution of intervals between posts, I" width="422" height="254" />
+
+
+
+<figcaption data-pre="Figure " data-post=":" >
+  
+  <p>
+    Distribution of intervals between posts, I
+    
+    
+    
+  </p> 
+</figcaption>
+
+</figure>
+<p>The peaks at 24-48-72 hours are clearly visible, indicating that many bloggers have a preferred posting time, and the interval between their posts is a multiple of 24 hours.</p>
+
+
+
+<figure>
+
+<img src="image47.png" alt="Distribution of intervals between posts, II" width="410" height="255" />
+
+
+
+<figcaption data-pre="Figure " data-post=":" >
+  
+  <p>
+    Distribution of intervals between posts, II
+    
+    
+    
+  </p> 
+</figcaption>
+
+</figure>
+<p>On a smaller scale, peaks are visible, corresponding to posting once an hour or every few hours. This may be due to the use of delayed posting services.</p>
+
+
+
+<figure>
+
+<img src="image48.png" alt="Number of posts by time of day across Instagram" width="416" height="258" />
+
+
+
+<figcaption data-pre="Figure " data-post=":" >
+  
+  <p>
+    Number of posts by time of day across Instagram
+    
+    
+    
+  </p> 
+</figcaption>
+
+</figure>
+<p>The intra-day fluctuations in activity are noticeable, and they are associated with the natural circadian rhythm of &ldquo;sleep-wakefulness&rdquo; and varying levels of activity during working and non-working hours.</p>
+<p>Instagram&rsquo;s audience is international and distributed across different time zones worldwide. To better understand the nature of peaks and fluctuations, let&rsquo;s visualize the audience from different countries separately:</p>
+
+
+
+<figure>
+
+<img src="image1.png" alt="Number of posts by time of day, by country" width="616" height="353" />
+
+
+
+<figcaption data-pre="Figure " data-post=":" >
+  
+  <p>
+    Number of posts by time of day, by country
+    
+    
+    
+  </p> 
+</figcaption>
+
+</figure>
+<p>The daily cycle is even more apparent on country-specific graphs. Additionally, in some countries, there is a noticeable increase in activity before and after the workday.</p>
+<h2 id="detailed-posting-patterns">Detailed Posting Patterns</h2>
+<p>Visual analysis of overall activity reveals that posts are distributed unevenly within a day, with certain discernible patterns. Let&rsquo;s move from a general analysis to a more detailed examination, and observe how individual bloggers make their posts.</p>
+<h3 id="stable-bloggers">Stable Bloggers</h3>
+<p>First, let&rsquo;s look at &ldquo;stable&rdquo; bloggers who have minimal variance in the intervals between their posts. It&rsquo;s evident that such bloggers mainly post strictly every 24 hours, with minor deviations:
+
+
+
+<figure>
+
+<img src="image19.png" width="840" height="441" />
+
+
+</figure></p>
+<h3 id="unstable-bloggers">Unstable Bloggers</h3>
+<p>In the next graph, we have &ldquo;unstable&rdquo; bloggers who exhibit high variability in the intervals between their posts. These are mainly people who post in batches of 2-3 posts, with long pauses between batches. We can see how the interval between posts cyclically changes from seconds to several days:
+
+
+
+<figure>
+
+<img src="image39.png" width="840" height="429" />
+
+
+</figure></p>
+<h3 id="fast-bloggers">Fast Bloggers</h3>
+<p>This graph shows bloggers with minimal intervals between their posts, i.e., those who create many posts per hour. These are primarily store accounts that upload their product catalog to Instagram. Regular pauses between postings can be observed (single spikes upwards), suggesting that they post only during working hours, taking breaks during non-working hours and weekends.
+
+
+
+<figure>
+
+<img src="image30.png" width="840" height="429" />
+
+
+</figure></p>
+<h3 id="slow-bloggers">Slow Bloggers</h3>
+<p>In this graph, we see bloggers with maximum intervals between their posts, i.e., those who post infrequently. No apparent patterns can be discerned here:
+
+
+
+<figure>
+
+<img src="image9.png" width="840" height="434" />
+
+
+</figure></p>
+<p>In conclusion, we have observed that, on one hand, there are many clear patterns in posting behaviors, while on the other hand, these patterns vary among different bloggers, and many do not exhibit any patterns at all. It is implausible to create a manual set of rules that would be equally suitable for all bloggers. Solving this problem within a reasonable time frame is only possible through the use of machine learning.</p>
+<h2 id="trying-machine-learning">Trying Machine Learning</h2>
+<h3 id="a-little-theory">A Little Theory</h3>
+<p>The first question to ask when developing a machine learning model is, what do we want to predict? At first glance, it seems that we should predict the time of the next post. That is, our model should learn the function:
+$$t_{i+1} = f(t_0, \dots, t_{i})$$</p>
+<p>where $t_0, \dots, t_{i}$ are the times of previous posts, and $t_{i+1}$ is the time of the next post that we want to predict.</p>
+<p>But, in reality, this is a bad idea. Predicting the exact time of the next post is like predicting the outcome of a coin toss. If the coin is fair, we know that the outcome of tosses will be 50/50 on average. But predicting the outcome of each specific toss is impossible. The same goes for a blogger: suppose we know that they prefer to post in the evenings. However, on a specific day, they may not make a post because they are traveling or make a post later than usual because of other obligations, or vice versa, make two posts at once. To predict the exact time, we would need to know many facts about the blogger&rsquo;s life that we do not have.</p>
+<p>Therefore, it is better to predict the probability that a blogger will make a post in a certain interval of time. The probability of individual events occurring in a fixed time interval is commonly described by the Poisson distribution in the simplest case:
+$$\Pr(k)=\frac{\lambda^k}{k!}e^{\lambda}$$</p>
+<ul>
+<li>$k$ is the observed number of events in a unit of time (in our case, events are posts, and a unit of time can be a day);</li>
+<li>$\lambda$ is the expected number of events per unit of time, i.e., the average number of events. This parameter is also called the intensity.</li>
+</ul>
+<p>Suppose a blogger makes an average of 3 posts per day ($\lambda=3$). Then, according to the Poisson distribution, we get the following probabilities of seeing $k$ posts in a single day:</p>
+<ul>
+<li>the probability of seeing 0 posts (i.e., none):
+$$\Pr(k=0)=\frac{2^0}{0!}e^{-3}=\frac{1}{1}e^{-3}\approx0.05$$</li>
+<li>the probability of seeing 1 post:
+$$\Pr(k=1)=\frac{3^1}{1!}e^{-3}=\frac{3}{1}e^{-3}\approx0.15$$</li>
+</ul>
+<p>The rest of the values are shown on the graph:
+
+
+
+<figure>
+
+<img src="image44.png" width="505" height="278" />
+
+
+</figure></p>
+<p>If bloggers always made posts with the same intensity, i.e., if the condition $\lambda=const$ were always met, we could end our analysis here, and we wouldn&rsquo;t even need machine learning. But in real life, intensity is constantly changing. A blogger may discover a new topic, become inspired by it, and start making posts much more frequently than usual. Conversely, a blogger may abandon their account, switch to something else, or go on vacation, and stop making posts altogether. In this case, intensity will tend towards zero. Thus, in real life, it is not a constant but a function of time:</p>
+<p>$$\lambda=f(t)$$</p>
+<p>Our task is to find this function, then we can estimate the probability of a new post appearing at any given time and model blogger behavior.</p>
+<h2 id="from-theory-to-practice">From theory to practice</h2>
+<p>Let&rsquo;s build a model that will learn the target function:
+$$\lambda=f(t, h)$$
+where $h$ is the history of the blogger&rsquo;s previous posts, and $t$ is the relative time since the last post.</p>
+<p>We will predict the intensity for the next 24 hours after the time $t$.
+To train the model, we need to define a loss function that shows how well our predictions work.
+We will use negative log likelihood:</p>
+<p>$$loss=-\log(Pr_{\lambda}(X=x\mid t))$$
+This is the probability of observing the number of posts, $x$, during the next 24 hours after the time $t$, for a Poisson distribution characterized by parameter $\lambda$.
+The number of posts is taken from real data. The more accurately we predict the value of $\lambda$,
+the higher the probability calculated from the real number of posts, and the lower the loss.</p>
+<p>For training, we will use a deep learning model consisting of a <a href="https://en.wikipedia.org/wiki/Recurrent_neural_network">Recurrent Neural Network</a> and several fully connected layers.
+The history of the blogger&rsquo;s previous posts is fed to the inputs of the RNN, and the states at the output of the RNN and the time $t$ are fed to the inputs of the fully connected layers.</p>
+<p>Let&rsquo;s see what we get as a result of training, using examples of posts from individual bloggers.
+The predicted intensity is denoted in blue, and the orange triangles and vertical lines denote the moments in time when posts were made.
+Ideally, the predicted intensity should be high when posting occurs and low when no posts are made:</p>
+
+
+
+<figure>
+
+<img src="image24.png" width="834" height="126" />
+
+
+</figure>
+<p>It can be seen that as the post frequency increases, the predicted value of the parameter $\lambda$ also increases, as expected, and when there are no posts, it decreases. When the blogger stops making new posts, the value of $\lambda$ drops almost to zero. At the moment when a new post appears after a long break, the value of $\lambda$ jumps up because the model sees that the blogger is still active and expects a new stream of posts from them.</p>
+<p>In fact, we modeled a self-exciting <a href="https://arxiv.org/pdf/1708.06401.pdf">Hawkes process</a>, without using any complex parameterized mathematics - the deep learning model learned all the patterns itself!</p>
+
+
+
+<figure>
+
+<img src="image43.png" width="840" height="128" />
+
+
+</figure>
+<p>In the second example, the model, having observed the history of posts during the first three months, identified the &ldquo;favorite days&rdquo; of the blogger when they make posts. Accordingly, the predicted intensity starts to increase in anticipation that the blogger will soon make a post. Even when there are no posts, the expected intensity still cyclically increases and decreases.</p>
+
+
+
+<figure>
+
+<img src="image3.png" width="840" height="128" />
+
+
+</figure>
+<p>In the third example, the model also identified a weekly seasonality pattern, but of a slightly different type: the blogger usually does not make posts on weekends. During the workweek, the intensity is approximately the same and high, while on weekends, the intensity drops.</p>
+<p>As we can see, our model is capable of identifying behavioral patterns of a blogger and predicting the probability of posts over time in accordance with these patterns.</p>
+<h2 id="model-for-real-world-application">Model for real-world application</h2>
+<p>The model that predicts the intensity (i.e., the parameter $\lambda$ for the Poisson distribution) is good from a theoretical standpoint. However, it does not provide a direct answer to the question that interests us in practice: when should we check whether a new post has appeared? To answer this question, we need to integrate the intensity function:</p>
+<p>$$\Lambda=\int_{t_{0}}^{t'} \mathrm\lambda(t),\mathrm{d}t$$</p>
+<p>where $t_0$ is the current time and $t'$ is the time of the proposed check.</p>
+<p>First, we set $t' = t_0$ and gradually increase $t'$ until the computed integral value exceeds a pre-selected threshold. It is clear that calculating the integral using numerical approximation based on individual points at which the model calculated predictions for $\lambda$ is an inaccurate, inconvenient, and resource-intensive procedure. Therefore, to make the model suitable for real-world use, we need to create a different one that immediately proposes a time for the check.</p>
+<p>As with the previous model, we need to determine the loss function. We need to simultaneously satisfy two conditions that contradict each other: on the one hand, we need to perform checks as rarely as possible to avoid generating a large number of requests to Instagram. On the other hand, we need to minimize delays, i.e., detect the post at the moment when it has not yet accumulated many likes. To minimize delays, we need to perform checks as frequently as possible. Our loss function should express a balance between these two conditions.</p>
+<p>First, let&rsquo;s figure out how to estimate delays. The growth of the number of likes in a post occurs non-linearly: at first, it is very fast, then it slows down, and by the end of two days after publication, the growth practically stops. The growth of likes in different posts can be visualized using a cumulative graph:</p>
+
+
+
+<figure>
+
+<img src="image29.png" width="509" height="318" />
+
+
+</figure>
+<p>The growth of likes over time in a post can be approximated by the formula:</p>
+<p>$$likes=1-e^{-\left(\frac{t}{\alpha}\right)^{\beta}}$$</p>
+<p>where $t$ is the time in hours, and $\alpha$ and $\beta$ are empirically chosen coefficients. For our case, $\alpha=4.2$ and $\beta=0.7$. The simulated values are shown by the blue line on the graph. Using this formula, we can estimate the delay as the fraction of the total number of likes that we missed. Thus, the delay will be a value in the interval $[0,1]$. This is the first part of our loss function.</p>
+<p>The second part will be the evaluation of the frequency of checks—the inverse of the predicted interval between the current time and the next check. The longer these intervals are, the fewer checks we will perform. The final loss is a sum of losses for likes $loss_{l}$ and losses for delays $loss_{f}$:</p>
+<p>$$loss = loss_{l} + k \cdot loss_{f}$$</p>
+<p>where $k$ is a coefficient that controls the balance between the frequency of checks and the size of delays. It is set manually based on business considerations: the budget for checks and how critical the delays are. When the coefficient is increased, the frequency of checks decreases and the delays increase, and vice versa.</p>
+<p>$$loss_{f} = \hat{t}^{-1}$$
+$$loss_{l} = \sum_{i=1}^{n} loss_{p_i}$$
+$$loss_{p_i} =
+\begin{cases}
+1-\exp\left(-\left(\frac{\hat{t}-t^{post}_i}{\alpha}\right)^{\beta}\right)       &amp; \quad \text{if } \hat{t}-t^{post}_i &gt; 0\\\
+0  &amp; \quad \text{otherwise}
+\end{cases}
+$$</p>
+<ul>
+<li>$\hat{t}$ &ndash; predicted time interval from the current time to the next check.</li>
+<li>$n$ &ndash; the number of future posts, i.e., posts that will be made after the current time.</li>
+<li>$t^{post}_i$ &ndash; the time interval from the current time to the $i$-th future post.</li>
+<li>$loss_{p_i}$ &ndash; the loss in likes for each future post. Losses are taken into account only if there is a delay, i.e., for a post that meets the condition $\hat{t} - t^{post}_i &gt; 0$, otherwise, the losses are equal to zero.</li>
+<li>$\alpha, \beta$ &ndash; coefficients for modeling the dynamics of likes, as discussed above.</li>
+</ul>
+<p>During the training process, we will randomly choose a current time within the account&rsquo;s post history and predict the time of the next check relative to this current time. As a result, after a sufficiently long training period, we will cover almost every interval between posts, making predictions for various points in history.</p>
+<h2 id="results">Results</h2>
+<p>Let&rsquo;s examine the results of our trained model. We will visualize the actual posts and the check points predicted by our model on a timeline simultaneously. Ideally, if we knew when the blogger would create a post, each check would occur immediately after the appearance of a new post, and there would be no checks at all between posts, or they would be very infrequent. However, this ideal is unattainable, as discussed earlier in this article. On the other hand, one could avoid using any models and simply check, for example, every hour to see if the blogger has new posts. Then the checks would be evenly distributed in the intervals between posts, but there would be many unnecessary checks.</p>
+<p>The checks obtained using our model should lie somewhere between these two extreme cases. That is, in time intervals where the likelihood of a new post is low, checks should be infrequent, while in intervals where there is a high probability of detecting a new post, checks should be more frequent.</p>
+<p>We will display the checks as small light-green dots and the posts as larger dots, colored on a scale from blue to yellow, depending on the number of likes we missed due to the delay:
+
+
+
+<figure>
+
+<img src="image49.png" width="542" height="68" />
+
+
+</figure></p>
+<p>We should also remember that likes accumulate very quickly; with a delay of just 10 minutes, we miss 10% of the likes, with a delay of half an hour – 20% of the likes, and with a delay of an hour – 30% of the likes.</p>
+<p>Let&rsquo;s look at the predictions of our model for bloggers from the test sample (i.e., bloggers the model did not see during training):
+
+
+
+<figure>
+
+<img src="image50.png" width="840" height="80" />
+
+
+</figure></p>
+<p>The first chart shows the entire history of one blogger. On the Y-axis are the intervals between checks, meaning the higher the green dot, the larger the interval. It is evident that at the beginning of the history, the model adapts to the blogger&rsquo;s behavior, with quite strong delays and short intervals between checks. Then, as information about the blogger&rsquo;s habits accumulates, the checks become less frequent and more accurate.</p>
+<p>
+
+
+<figure>
+
+<img src="image15.png" width="840" height="80" />
+
+
+</figure>
+The second chart shows a section of the same blogger&rsquo;s history when the model has reached a stable mode of operation. A clear daily cyclicity is visible, with checks at night being much less frequent and checks during the day being more frequent. The post times coincide with periods of the most frequent checks, meaning our model has successfully learned.</p>
+<p>Let&rsquo;s consider another account. In the first graph, we can see how the model gradually increases the interval between checks (green dots move higher) if the blogger does not create new posts. Indeed, why check the account frequently if there is no activity?
+
+
+
+<figure>
+
+<img src="image28.png" width="840" height="80" />
+
+
+</figure>
+
+
+
+<figure>
+
+<img src="image52.png" width="840" height="80" />
+
+
+</figure>
+In the second graph, we can observe how the model adapts to the blogger&rsquo;s changing behavior. Initially, the blogger made one post per day, and on the check frequency diagram, we can clearly see an increase in frequency in the middle of the day, when the probability of a post is maximum. Then the blogger begins to make two posts per day, and we can clearly see how the checks quickly adapt to the new behavior. Instead of one trough corresponding to a reduced interval between checks in the middle of the day, we begin to observe &ldquo;plateaus&rdquo; in the right half of the graph, corresponding to a uniformly reduced interval throughout the day.</p>
+<p>The successful performance of the model is confirmed not only visually but also by numbers. If the intervals between checks are determined by our model, to achieve the same average percentage of missed likes (~15%), 2-4 times fewer checks are required compared to the baseline. The baseline is considered to be uniform checks every N minutes. Conversely, if the number of checks is fixed and the percentage of missed likes is compared, the model will have 1.5-2 times fewer missed likes than the baseline.</p>
+</div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+  </div>
+
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-inner">
+          
+          <ul class="footer-menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li class="copyright">© 2023 ZetaData FZCO</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+
+
+
+  <script type="text/javascript" src="/js/services.min.052ec1d7bcff8bba2b50359ebe62c0e6d0f530b3bd5cf723d5ccc5e8f22bd123.js"></script>
+  
+
+
+  
+  <script type="text/javascript" src="/js/scripts.min.98ee06cc35517b5800b382aecb0fc59893e95b9c11dd21842d0d57e4f68043e3.js"></script>
+  
+
+  
+  
+  
+    
+  
+
+
+</body>
+</html>

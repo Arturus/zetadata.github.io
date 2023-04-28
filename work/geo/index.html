@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Geolocation of Instagram bloggers - ZetaData FZCO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" href="/favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="/css/style.min.80f05de081f6e7de0c68e13764c2cc7cfb860fab823aeb933f1646fe70d03c82.css">
+  
+
+  
+
+</head>
+
+<body class='page page-work-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    <li class="menu-item-services">
+      <a href="/services/">
+        
+        <span>Services</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-work">
+      <a href="/work/">
+        
+        <span>Work</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-contact">
+      <a href="/contact/">
+        
+        <span>Contact</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div id="wrapper" class="wrapper">
+    
+  <script type="text/javascript">
+  MathJax = {
+    tex: {
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+    },
+  };
+</script>
+<script
+    async
+    id="MathJax-script"
+    src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"
+    integrity="sha384-+BSz3oj3ILMYvOBr16U9i0H4RZRmGyQQ+1q9eqr8T3skmAFrJk8GmgwgqlCZdNSo"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    type="text/javascript"></script>
+
+
+
+<div class='header header-absolute'>
+  <div class="container">
+    <div class="logo">
+      <a href="/"><img height=29px width=36px alt="ZetaData" src="/images/ZetaData.svg" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="/"><img height=36px width=36px alt="ZetaData" src="/images/logo-mobile.svg" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    <li class="menu-item-services">
+      <a href="/services/">
+        
+        <span>Services</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-work">
+      <a href="/work/">
+        
+        <span>Work</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-contact">
+      <a href="/contact/">
+        
+        <span>Contact</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button" aria-label="Toggle Menu">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+    
+<div id="hero" class="hero-image hero-image-setheight" style="background-image: url('/')">
+  <div class="container ">
+    <div class="hero-text">
+      <span class="hero-section">work</span>
+      <h1>Geolocation of Instagram bloggers</h1>
+      <p>implemented for Deep.Social Inc</p>
+    </div>
+  </div>
+</div>
+  
+<div class="container pt-4 pt-md-10 pb-4 pb-md-10">
+  <div class="row justify-content-start">
+    <div class="col-12 col-md-8">
+      <div class="work work-single">
+        <div class="content"><img src="world_crop2.jpg" width="700">
+<p>For advertisers, one of the most important parameters of a blogger and their audience is the geographical location corresponding to the place of residence.
+To make advertising campaigns effective, they usually need to be targeted to a specific country or even city.</p>
+<h2 id="geotags">Geotags</h2>
+<p>Instagram posts can contain information about the location where the post was made, called <em>geotags</em>. This is the simplest and most obvious way to determine geolocation. The page header shows a map colored according to the number of posts made in each location worldwide (built using geotags from over 4 billion posts). It can be seen that the highest intensity of posts corresponds to places with a high population density - large cities with suburbs, areas along major highways.</p>
+<p>But geotags, despite their obvious usefulness, are not a reliable source of information about the account owner&rsquo;s <strong>place of residence</strong>:</p>
+<ul>
+<li>People often use geotagging only when they travel on business trips, vacations, or sightseeing trips or are in places they find interesting. This means that a blogger living in London may have geotags from anywhere in the world except London.</li>
+<li>Not all accounts include geotagging for posts. For the majority of posts (over 85%), geotags are not provided.</li>
+</ul>
+<p>Therefore, if geolocation is determined only by geotags, the results will have low coverage and accuracy. To improve the quality of determination, additional information must be used.</p>
+<img src="sources.jpg" width="450"/>
+<h2 id="additional-sources-of-information">Additional sources of information</h2>
+<p>There are many additional, less obvious and reliable than geotags, sources of information about the blogger&rsquo;s location.</p>
+<ul>
+<li>First and foremost is the text in the account&rsquo;s &lsquo;bio&rsquo; section: it may contain the blogger&rsquo;s city or local geographic names, websites or emails in national domains, emojis corresponding to country flags, etc.</li>
+<li>The same information + textual tags may be contained in the text of posts and comments.</li>
+<li>In addition, information about language and audience geolocation can be used &ndash; it is obvious that, for example, a Japanese audience is more likely to follow a blogger from Japan than from Mexico. It is also unlikely that a Mexican blogger will post in Japanese.</li>
+<li>Additionally, approximate geoinformation can be extracted from photos in posts (when there are no geotags).</li>
+</ul>
+<p>All this information is extracted using a set of rules, including both complex hand-coded heuristics and machine learning models for named entity recognition. A discussion of extraction methods could be a project in itself, so here I will focus only on the use of already extracted geoinformation.</p>
+<h2 id="ensemble-learning">Ensemble learning</h2>
+<p>So, there are several sources of geolocation information. Each source on its own is not very accurate or reliable, but using them together can give a much more precise result. The classical approach used for dealing with such sources is <em>ensemble learning</em>.</p>
+<blockquote>
+<p>Ensemble learning is a machine learning paradigm where multiple learners are trained to solve the same problem. In contrast to ordinary machine learning approaches which try to learn <em>one</em> hypothesis from training data, ensemble methods try to construct a set of hypotheses and combine them to use.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+</blockquote>
+<p>In our particular case, a type of ensemble learning called <em><a href="https://en.wikipedia.org/wiki/Ensemble_learning#Stacking">stacking</a></em> is used. The essence of this method is that there are two levels of models:</p>
+<ul>
+<li>First level - these are the models that extract geolocation information from the Instagram data we talked about in the previous section (<em>base classifiers</em>).</li>
+<li>Second level (<em>meta-classifier</em>) uses the predictions generated by the models at the first level to make the final decision.</li>
+</ul>
+<img src="hands.jpg" width=600/>
+<h2 id="weighted-majority-voting">Weighted majority voting</h2>
+<p>The simplest way to create a meta-classifier is to use <em>weighted majority voting</em>. There are $N$ base classifiers, each of them assigned a weight $w_i$, which corresponds to the probability of correct classification $\hat{p}_i$ (in our case, the correct identification of the blogger&rsquo;s country). Probabilities are calculated from the training data.
+$$w_i=\log\left(\frac{\hat{p}_i}{1−\hat{p}_i}\right),\quad i=1,\dotsc,N$$</p>
+<p>Classifiers that often make mistakes are assigned a lower weight, and classifiers with high accuracy are assigned a higher weight. This completes the &ldquo;training&rdquo;.</p>
+<p>Usage: for the account of interest, each of the base classifiers is assigned class labels (in our case, the presumed countries), resulting in a set of labels $l_1,\dotsc,l_N$. The values that labels can take are the set of all countries with a size of $M$: $(c_1,\dotsc,c_M)$. The rating of each class is calculated by summing the weights of all votes cast for it.</p>
+<p>$$R(k)=\sum_{l_i=c_k}w_i,\quad k=1,\dotsc,M$$</p>
+<p>The resulting class (country) is the one with the highest rating, i.e., the one with the most votes with the highest weight:</p>
+<p>$$k^*=\operatorname*{arg} \operatorname*{max}_{k=1}^M R(k)$$</p>
+<p>The first model for geolocation determination used this method as the simplest to implement. But it has drawbacks:</p>
+<ul>
+<li>The predictions of base classifiers can be incorrect. For example, the country Japan can be extracted from the bio, and Brazil and Germany from the geotags, while the blogger actually lives in England. Therefore, the meta-classifier should not only predict the country but also provide the probability of the correct answer. If the probability obtained is below some threshold, it should be considered that we do not have enough information to determine the country. But majority voting does not provide the probability value; we can only estimate the upper and lower bounds.</li>
+<li>Majority voting cannot handle additional information that is not a class label, such as the language of the account.</li>
+<li>Majority voting assumes that the predictions of base classifiers are uncorrelated with each other and that the probability of correct classification is the same for any country. In real life, neither of these assumptions holds: we need to take into account the possible interactions between classifiers and individual features of countries.</li>
+</ul>
+<img src="catboost.jpeg" width="400">
+<h2 id="gradient-boosting">Gradient Boosting</h2>
+<p>Considering all the drawbacks of majority voting, a more sophisticated model was developed using <em><a href="https://en.wikipedia.org/wiki/Gradient_boosting">gradient boosting</a></em>. In this project, we used the library <a href="https://tech.yandex.com/catboost/">Yandex CatBoost</a>.</p>
+<p>Gradient boosting is one of the best-known machine learning algorithms for tabular data. Therefore, the quality of the obtained model exceeded all expectations.</p>
+<h3 id="training-data-formation">Training Data Formation</h3>
+<p>To train the model, we first needed to obtain labeling for Instagram accounts in the form of the owner&rsquo;s true place of residence. Obtaining this data directly from the owners was difficult, so an indirect source was used: Twitter.</p>
+<p>A Twitter user can specify their place of residence (location), and this information is publicly available. If the same person has an Instagram account, then we can use the geolocation information from Twitter as ground truth. Of course, geodata from Twitter is not always completely accurate, as people do not always provide their real place of residence or may move and forget to update their location. According to rough estimates, approximately 1-3% of Twitter accounts have incorrect or outdated information about their location. However, as practice has shown, this did not impede training.</p>
+<img src="location.jpg" width=600>
+<p>The location from Twitter is a string in arbitrary format. Sometimes it specifies a country, sometimes a city, sometimes a state, and sometimes just an aphorism or a joke that has nothing to do with geography. To train the model, it is necessary to convert this data into a country code. The task of obtaining geographic coordinates from an address in arbitrary format is called <em>geocoding</em>. In this project, the <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> system created by the Open Street Maps community was used for geocoding.</p>
+<p>Geocoding often does not have a unique solution. For example, the string &ldquo;Moscow&rdquo; can refer to the capital of Russia or a city in the USA. &ldquo;Georgia&rdquo; can be either the country of Georgia or the US state of Georgia.</p>
+<p>To eliminate ambiguities and improve accuracy, additional analysis of Google search results was used. For each address string, the search results were checked for the presence of a &ldquo;geographic location&rdquo; snippet, and if found, the link to information on <a href="https://www.wikidata.org">WikiData</a> was analyzed. If the country from WikiData matched the country identified by Nominatim, the geocoding result was accepted; otherwise, additional manual verification was needed. The idea here is that Google, based on its own analysis of search query popularity, knows which city people usually mean when they write &ldquo;Moscow.&rdquo; As the results showed, such verification was useful and significantly increased the accuracy of geocoding compared to using pure Nominatim.</p>
+<h3 id="the-model">The Model</h3>
+<p>The most straightforward approach to modeling is multiclass classification, where each class corresponds to a separate country. However, this type of model does not perform well in practice. The problem is that the distribution of countries based on the number of accounts in them is highly uneven. There are a few dominant countries with the majority of accounts and a long tail of smaller countries or countries where Instagram is unpopular. As a result, the country identification quality for countries in the &ldquo;tail&rdquo; is mediocre. The models simply lack enough data for training in these countries.</p>
+
+
+
+<figure>
+
+<img src="acc_country.jpg" alt="The dependency of accuracy (Y-axis) on the number of country accounts in the training sample (X-axis, logarithmic scale) for one of the early models." width="400" />
+
+
+
+<figcaption data-pre="Figure " data-post=":" class="numbered">
+  
+  <p>
+    The dependency of accuracy (Y-axis) on the number of country accounts in the training sample (X-axis, logarithmic scale) for one of the early models.
+    
+    
+    
+  </p> 
+</figcaption>
+
+</figure>
+<p>As shown in Fig. 1, the accuracy decreases with a smaller number of accounts per country. To avoid this effect, a different method of modeling classes was chosen, conceptually similar to majority voting, where the model does not distinguish countries from each other but considers only the &ldquo;strength&rdquo; of votes for each country.</p>
+<p>In the data for each account, base classifiers typically recognize no more than 3-4 different countries. From these countries, the correct answer (or the absence of an answer) must be selected. Thus, the model requires only four classes, each corresponding to one unique country in the input data, plus one negative class called &ldquo;Other&rdquo; for the model to signal that none of the proposed countries is suitable. Countries are ranked by popularity, i.e., the most frequently encountered country is considered class #1, the second most popular as class #2, and so on. At the same time, to account for the individual characteristics of specific countries, the proposed country codes are also fed into the model.</p>
+<p>As a result, this model combines the best aspects of majority voting (the ability to learn from any country, even if it appears only once in the training set) and multiclass with country classes (the ability to consider the specific characteristics of individual countries). Experiments have shown that the accuracy of this model has significantly increased for smaller countries without compromising the accuracy of larger ones.</p>
+<h3 id="adjusting-the-weights-of-training-examples">Adjusting the Weights of Training Examples</h3>
+
+
+
+<figure>
+
+<img src="country_diff.png" alt="The distribution of the top 18 countries&#39; shares on Twitter (from training data) and Instagram (from geotags)" width="600" />
+
+
+
+<figcaption data-pre="Figure " data-post=":" class="numbered">
+  
+  <p>
+    The distribution of the top 18 countries' shares on Twitter (from training data) and Instagram (from geotags)
+    
+    
+    
+  </p> 
+</figcaption>
+
+</figure>
+<p>The distribution of countries on Twitter differs significantly from that on Instagram, as seen in Fig. 2. For example, Instagram&rsquo;s popularity in Russia and Iran far exceeds that of Twitter. If the training data is used as is, the model will memorize the country distribution from Twitter and adjust its answers accordingly. The probability that the model will output Iran as an answer will be as low as Iran&rsquo;s share on Twitter.</p>
+<p>To avoid this, during training, additional weights were assigned to each training example, equal to the ratio of the corresponding example country&rsquo;s shares on Instagram and Twitter.</p>
+<h3 id="training-results">Training Results</h3>
+<p>An accuracy of <strong>97%</strong> was achieved in identifying the country with a coverage of <strong>86%</strong> (i.e., for 14% of the accounts, the available information was insufficient for reliable decision-making, and the issued probability was below the specified threshold). If no threshold probability is used and predictions are considered for any accounts with at least some geoinformation, an accuracy of 93.4% is achieved. The accuracy figures were measured on a test set, i.e., on accounts that the model had never seen during training and hyperparameter tuning.</p>
+
+
+
+<figure>
+
+<img src="acc_cover.png" alt="The interdependence between accuracy and coverage at different probability threshold values." width="500" />
+
+
+
+<figcaption data-pre="Figure " data-post=":" class="numbered">
+  
+  <p>
+    The interdependence between accuracy and coverage at different probability threshold values.
+    
+    
+    
+  </p> 
+</figcaption>
+
+</figure>
+
+
+
+<figure>
+
+<img src="features_unnorm.png" alt="The importance of input features for the model." width="500" />
+
+
+
+<figcaption data-pre="Figure " data-post=":" class="numbered">
+  
+  <p>
+    The importance of input features for the model.
+    
+    
+    
+  </p> 
+</figcaption>
+
+</figure>
+<p>As seen in Fig. 4, the most important features are country_id (country identifier, allowing the model to consider the individual characteristics of specific countries), geotags from posts, blogger language, and audience geodata. However, this diagram does not accurately reflect the real importance since not all features are present in every account.</p>
+
+
+
+<figure>
+
+<img src="features_norm.png" alt="The importance of input features for the model. Features are normalized by frequency." width="500" />
+
+
+
+<figcaption data-pre="Figure " data-post=":" class="numbered">
+  
+  <p>
+    The importance of input features for the model. Features are normalized by frequency.
+    
+    
+    
+  </p> 
+</figcaption>
+
+</figure>
+<p>When normalizing the importance of features by their frequency in accounts, the leading features are those with the most accurate geoinformation: phone numbers (country code), geotags, and emoji (country flags).</p>
+<p>We can delve even deeper and analyze the model using the <a href="https://github.com/slundberg/shap">SHAP framework</a><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.
+
+
+
+<figure>
+
+<img src="shap_all.png" alt="Feature importance using SHAP." width="400" />
+
+
+
+<figcaption data-pre="Figure " data-post=":" class="numbered">
+  
+  <p>
+    Feature importance using SHAP.
+    
+    
+    
+  </p> 
+</figcaption>
+
+</figure></p>
+<p>The further the points in Fig. 6 deviate from the center, the more significant the impact of the given feature. Blue points represent zero values, usually corresponding to the absence of the feature in the input data, while red points are non-zero, i.e., in this context, non-empty.</p>
+
+
+
+<figure>
+
+<img src="features_detail.png" alt="Feature importance detail (SHAP) for individual accounts." width="700" />
+
+
+
+<figcaption data-pre="Figure " data-post=":" class="numbered">
+  
+  <p>
+    Feature importance detail (SHAP) for individual accounts.
+    
+    
+    
+  </p> 
+</figcaption>
+
+</figure>
+<p>As shown in Fig. 7, the most &ldquo;active&rdquo; features are country_id, geotags from posts, language, and emoji.</p>
+<h2 id="model-performance-example">Model Performance Example</h2>
+<p>To showcase the real-world results of the model, a demo sample of 2,000 accounts (based on test data that the model had never seen during training) has been created. The sample is a CSV file consisting of 5 columns:</p>
+<ul>
+<li><strong>instagram</strong> &ndash; Instagram account for which the country was determined</li>
+<li><strong>twitter</strong> &ndash; corresponding Twitter account, the source of &ldquo;truth&rdquo;</li>
+<li><strong>prediction</strong> &ndash; predicted country</li>
+<li><strong>truth</strong> &ndash; country from Twitter</li>
+<li><strong>probability</strong> &ndash; probability, interpreted as confidence in the prediction</li>
+</ul>
+<p>The file can be downloaded <a href="geo_sample.csv.gz">here</a>.</p>
+<p>The sample includes results with a probability &gt; 90%. As seen from the provided data, the quality of linking Instagram &lt;&ndash;&gt; Twitter is not perfect, and errors that degrade the measured resulting accuracy occur. Therefore, the actual model accuracy might be even higher than the measured 97%.</p>
+<h2 id="geodata-visualizations">Geodata Visualizations</h2>
+<p>Finally, let&rsquo;s take a look at a couple of additional visualizations of Instagram&rsquo;s geographic data, obtained using the model described above.</p>
+<h3 id="visualization-1">Visualization 1</h3>
+<p>Let&rsquo;s calculate the distribution of the number of Instagram accounts by country. Of course, it is impossible to determine the absolute number, as that would require data for all existing Instagram accounts. Instead, we can take a large enough sample and determine the percentage of all accounts belonging to each country.</p>
+
+
+
+<figure>
+
+<img src="map_percent.png" alt="The top three countries in terms of the number of accounts are _USA, Brazil, Indonesia_. The fewest accounts are in _African_ countries, _North Korea_, and _Greenland_." width="800" />
+
+
+
+<figcaption data-pre="Figure " data-post=":" >
+  
+  <p>
+    The top three countries in terms of the number of accounts are <em>USA, Brazil, Indonesia</em>. The fewest accounts are in <em>African</em> countries, <em>North Korea</em>, and <em>Greenland</em>.
+    
+    
+    
+  </p> 
+</figcaption>
+
+</figure>
+<h3 id="visualization-2">Visualization 2</h3>
+<p>The previous visualization is interesting, but it is obvious that the more populous a country is, the more Instagram accounts it will have. To eliminate dependence on population, we can calculate the percentage of the total number of Instagram accounts <em>per capita</em> for each country. This way, we obtain the popularity of Instagram among the population.
+<img src="map_normed.png" width=800/></p>
+<p>A completely different picture emerges.
+The top five countries where residents love Instagram the most are <em>Cyprus, United Arab Emirates, Iceland, Qatar, Malaysia</em>. These countries are colored light yellow, making them less visible on the map. Among the larger countries, Instagram is most popular in <em>Brazil, Australia, USA</em>.
+Instagram is least popular in Africa and Asia.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>The project has been deployed into production and is successfully used by the client, significantly improving the accuracy of determining the residence of bloggers and their audiences, and reducing the number of customer complaints about inaccurate data. Currently, the project is also being used by companies that have purchased the rights to this product.</p>
+<h4 id="possible-improvements">Possible improvements:</h4>
+<ol>
+<li>Currently, the geotags being considered are simply summed, and their order is not taken into account (bag of geotags). However, there is often a clear temporal structure in geotags that corresponds to the geographic movements of the account owner. If this structure is taken into account, i.e., working with geotags as a time series, it may be possible to increase accuracy. For instance, the model could distinguish between situations when an account owner goes on a business trip and when they move to a new place of residence.</li>
+<li>Information from photographs is not currently used, as training a computer vision classifier takes a long time, and the project would not have fit within the planned timeframe. If this information were to be utilized, it would provide an additional data source, particularly relevant for accounts that do not use geotags and do not provide additional information in their bio. This would result in increased coverage.</li>
+</ol>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p><a href="https://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/springerEBR09.pdf">Zhi-Hua Zhou, Ensemble Learning</a>.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>Scott Lundberg, Su-In Lee (2017). A Unified Approach to Interpreting Model Predictions. <a href="https://arxiv.org/abs/1705.07874">arXiv:1705.07874</a> [cs.AI]&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+</div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+  </div>
+
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-inner">
+          
+          <ul class="footer-menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li class="copyright">© 2023 ZetaData FZCO</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+
+
+
+  <script type="text/javascript" src="/js/services.min.052ec1d7bcff8bba2b50359ebe62c0e6d0f530b3bd5cf723d5ccc5e8f22bd123.js"></script>
+  
+
+
+  
+  <script type="text/javascript" src="/js/scripts.min.98ee06cc35517b5800b382aecb0fc59893e95b9c11dd21842d0d57e4f68043e3.js"></script>
+  
+
+  
+  
+  
+    
+  
+
+
+</body>
+</html>

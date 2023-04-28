@@ -8,42 +8,31 @@
     <language>en-us</language>
     <lastBuildDate>Sat, 10 Feb 2018 11:52:18 +0700</lastBuildDate><atom:link href="/work/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Geolocation of Instagram bloggers</title>
+      <link>/work/geo/</link>
+      <pubDate>Wed, 18 Nov 2020 12:33:46 +1000</pubDate>
+      
+      <guid>/work/geo/</guid>
+      <description>For advertisers, one of the most important parameters of a blogger and their audience is the geographical location corresponding to the place of residence. To make advertising campaigns effective, they usually need to be targeted to a specific country or even city.
+Geotags Instagram posts can contain information about the location where the post was made, called geotags. This is the simplest and most obvious way to determine geolocation. The page header shows a map colored according to the number of posts made in each location worldwide (built using geotags from over 4 billion posts).</description>
+    </item>
+    
+    <item>
+      <title>Posting time forecast for Instagram</title>
+      <link>/work/post_time/</link>
+      <pubDate>Wed, 18 Nov 2020 12:33:46 +1000</pubDate>
+      
+      <guid>/work/post_time/</guid>
+      <description>The audience of an Instagram blogger can be divided into active (those who like posts) and passive (those who follow but do not like posts) users. For advertisers, the active audience is of particular interest, so it is better to determine their characteristics (socio-demographics, interests, etc.) separately. To identify the active audience, it is essential to collect the likes on posts. The problem is that large bloggers may have millions of likes, and Instagram returns a very limited number of latest likes per request, making it technically challenging to obtain all likes from all bloggers&#39; posts.</description>
+    </item>
+    
+    <item>
       <title>TopicTensor: Instagram topics</title>
       <link>/work/topic_tensor/</link>
       <pubDate>Wed, 18 Nov 2020 12:33:46 +1000</pubDate>
       
       <guid>/work/topic_tensor/</guid>
-      <description>The Challenge of Selecting Influencers Advertisers who promote products and services through influencer posts face a significant problem called targeting. In advertising platforms like AdWords, advertisers can focus on specific keywords to narrow down their target audience, ensuring that it matches the products and services they&amp;rsquo;re promoting. However, this capability doesn&amp;rsquo;t exist on social networks like Instagram, where millions of potential influencers can promote ads. How can an advertiser choose influencers whose content aligns with their campaign?</description>
-    </item>
-    
-    <item>
-      <title>Fall Plaza</title>
-      <link>/work/fall-plaza/</link>
-      <pubDate>Sun, 18 Nov 2018 12:33:46 +1000</pubDate>
-      
-      <guid>/work/fall-plaza/</guid>
-      <description>Agitabitur signa lympha; non lacunae, mox cum tumulis quoque triste dictis. Ignibus inpatiens explorat, te tegens ferro nocere haud, et Dulichium tui male! Quo sed fuit flexit et hic die solido, gloria?
-Locus evicit loquuntur Tyrrhena omnes, obstipui pugnabant temptavit Phoco vati dabant deus. Memorata haberet sepulcrales gentisque dum sic, in flumina templa! Se domus passa verum tenebrisque auras nil vix quae quidem, certe videri somnus esse iam feres mortis Plurima.</description>
-    </item>
-    
-    <item>
-      <title>Modern Hospital</title>
-      <link>/work/modern-hospital/</link>
-      <pubDate>Sun, 18 Nov 2018 12:33:46 +1000</pubDate>
-      
-      <guid>/work/modern-hospital/</guid>
-      <description>Agitabitur signa lympha; non lacunae, mox cum tumulis quoque triste dictis. Ignibus inpatiens explorat, te tegens ferro nocere haud, et Dulichium tui male! Quo sed fuit flexit et hic die solido, gloria?
-Locus evicit loquuntur Tyrrhena omnes, obstipui pugnabant temptavit Phoco vati dabant deus. Memorata haberet sepulcrales gentisque dum sic, in flumina templa! Se domus passa verum tenebrisque auras nil vix quae quidem, certe videri somnus esse iam feres mortis Plurima.</description>
-    </item>
-    
-    <item>
-      <title>Cargo Terminal</title>
-      <link>/work/cargo-terminal/</link>
-      <pubDate>Sun, 18 Nov 2018 12:33:46 +1000</pubDate>
-      
-      <guid>/work/cargo-terminal/</guid>
-      <description>Agitabitur signa lympha; non lacunae, mox cum tumulis quoque triste dictis. Ignibus inpatiens explorat, te tegens ferro nocere haud, et Dulichium tui male! Quo sed fuit flexit et hic die solido, gloria?
-Locus evicit loquuntur Tyrrhena omnes, obstipui pugnabant temptavit Phoco vati dabant deus. Memorata haberet sepulcrales gentisque dum sic, in flumina templa! Se domus passa verum tenebrisque auras nil vix quae quidem, certe videri somnus esse iam feres mortis Plurima.</description>
+      <description>The Challenge of Influencer Selection Advertisers who promote products and services through influencer posts face a significant problem called targeting. In advertising platforms like AdWords, advertisers can focus on specific keywords to narrow down their target audience, ensuring that it matches the products and services they&amp;rsquo;re promoting. However, this capability doesn&amp;rsquo;t exist on social networks like Instagram, where millions of potential influencers can promote ads. How can an advertiser choose influencers whose content aligns with their campaign?</description>
     </item>
     
   </channel>

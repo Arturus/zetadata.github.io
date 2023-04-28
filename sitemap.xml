@@ -2,19 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/work/geo/</loc>
+    <lastmod>2020-11-18T12:33:46+10:00</lastmod>
+  </url><url>
+    <loc>/work/post_time/</loc>
+    <lastmod>2020-11-18T12:33:46+10:00</lastmod>
+  </url><url>
     <loc>/work/topic_tensor/</loc>
     <lastmod>2020-11-18T12:33:46+10:00</lastmod>
   </url><url>
     <loc>/services/audience/</loc>
-    <lastmod>2018-11-18T12:33:46+10:00</lastmod>
-  </url><url>
-    <loc>/work/fall-plaza/</loc>
-    <lastmod>2018-11-18T12:33:46+10:00</lastmod>
-  </url><url>
-    <loc>/work/modern-hospital/</loc>
-    <lastmod>2018-11-18T12:33:46+10:00</lastmod>
-  </url><url>
-    <loc>/work/cargo-terminal/</loc>
     <lastmod>2018-11-18T12:33:46+10:00</lastmod>
   </url><url>
     <loc>/about/</loc>
